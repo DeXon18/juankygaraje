@@ -1,0 +1,38 @@
+name: Extract website demo
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/extract-demo.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract and validate website
+        shell: bash
+        run: |
+          set -euo pipefail
+          tmp="$(mktemp -d)"
+          trap 'rm -rf "$tmp"' EXIT
+          unzip -t juankygaraje-github-pages.zip
+          unzip -q juankygaraje-github-pages.zip -d "$tmp"
+          test -s "$tmp/index.html"
+          test -s "$tmp/support.js"
+          test -s "$tmp/vendor/react.js"
+          test -s "$tmp/vendor/react-dom.js"
+          test -f "$tmp/.nojekyll"
+          test "$(find "$tmp/assets" -type f | wc -l)" -eq 14
+          cp -a "$tmp/index.html" "$tmp/support.js" "$tmp/vendor" "$tmp/assets" "$tmp/.nojekyll" .
+          git add -- index.html support.js vendor assets .nojekyll
+          if git diff --cached --quiet; then
+            echo "Website already extracted"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "feat: extract Juanky Garage website demo"
+          git push origin HEAD:main
