@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juanky Garage · Taller de motos</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F0F0E}
+a{color:#FEED03}a:hover{color:#FFF475}
+.ph{background-color:#1E1E1B;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,0.035) 0 12px,transparent 12px 24px)}
+.ph-light{background-color:#E4DFD4;background-image:repeating-linear-gradient(135deg,rgba(0,0,0,0.04) 0 12px,transparent 12px 24px)}
+.btn{transition:transform .15s ease,background-color .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.card{transition:border-color .2s ease}
+.card:hover{border-color:#FEED03 !important}
+input:focus,textarea:focus{outline:2px solid #FEED03;outline-offset:1px}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #F2EFE8; background: #0F0F0E; width: 100%; line-height: 1.55">
+
+  <!-- NAV -->
+  <header style="position: sticky; top: 0; z-index: 10; background: rgba(15,15,14,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid #2A2A26">
+    <nav aria-label="Principal" style="max-width: 1240px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="#inicio" aria-label="Juanky Garage, inicio" style="display: flex; align-items: center; gap: 14px; text-decoration: none; color: #F2EFE8">
+        <img src="./assets/1d8d7e1fb2e34f6a98b6f7774f777093.png" alt="Juanky Garage" style="height: 56px; width: auto; display: block">
+        <span style="font-size: 13px; color: #A8A398; letter-spacing: 0.5px; border-left: 1px solid #3A3A34; padding-left: 14px; line-height: 1.2">Reparación de<br>motocicletas</span>
+      </a>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; font-size: 15px; font-weight: 500">
+        <a href="#servicios" style="color: #F2EFE8; text-decoration: none; padding: 10px 0">Servicios</a>
+        <a href="#asesoramiento" style="color: #F2EFE8; text-decoration: none; padding: 10px 0">Compra de segunda mano</a>
+        <a href="#galeria" style="color: #F2EFE8; text-decoration: none; padding: 10px 0">Galería</a>
+        <a href="#donde" style="color: #F2EFE8; text-decoration: none; padding: 10px 0">Dónde estamos</a>
+        <a class="btn" href="tel:+34644371237" style="background: #FEED03; color: #0F0F0E; text-decoration: none; font-weight: 600; padding: 11px 18px; border-radius: 999px; display: inline-flex; align-items: center; gap: 8px">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
+          644 37 12 37
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 88px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+    <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+      <span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #FEED03; border: 1px solid #3A3A34; padding: 8px 14px; border-radius: 999px">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: {{statusColor}}"></span>
+        Taller en Medina del Campo
+      </span>
+      <h1 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(56px, 8vw, 112px); line-height: 0.92; text-transform: uppercase; letter-spacing: -0.5px">Tu moto,<br>en manos de<br><span style="color: #FEED03">quien la entiende.</span></h1>
+      <p style="margin: 0; font-size: 19px; color: #C9C4B8; max-width: 540px">Mecánica y electricidad para tu moto, con la máxima atención y cuidado. Y si vas a comprar una de segunda mano, te acompañamos a verla.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px">
+        <a class="btn" href="https://wa.me/34644371237" style="background: #FEED03; color: #0F0F0E; text-decoration: none; font-weight: 600; font-size: 17px; padding: 16px 26px; border-radius: 999px; display: inline-flex; align-items: center; gap: 10px">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 21l2.1-5.3A8.5 8.5 0 1 1 21 11.5z"></path></svg>
+          Pide cita por WhatsApp
+        </a>
+        <a class="btn" href="#servicios" style="color: #F2EFE8; text-decoration: none; font-weight: 600; font-size: 17px; padding: 16px 26px; border-radius: 999px; border: 1px solid #4A4A42">Ver servicios</a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 32px; padding-top: 8px; font-size: 14px; color: #A8A398">
+        <span style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FEED03" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Lunes a viernes · 9:00 – 14:00</span>
+        <span style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FEED03" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Avenida Constitución, 107</span>
+      </div>
+    </div>
+    <div style="flex: 1 1 440px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+      <img src="./assets/b15eac8902819c8123c67bde9d4a5c83.jpg" alt="Moto naked aparcada frente a un muro con grafitis" style="grid-column: span 2; width: 100%; height: 340px; object-fit: cover; border-radius: 20px; display: block">
+      <img src="./assets/99c48758ad9df6f79e2ded14fb014663.jpg" alt="Sincronizando carburadores con vacuómetros en el taller" style="width: 100%; height: 180px; object-fit: cover; border-radius: 20px; display: block">
+      <div style="height: 180px; border-radius: 20px; background: #FEED03; color: #0F0F0E; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between">
+        <svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"></path></svg>
+        <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 28px; line-height: 1; text-transform: uppercase">Calidad y confianza, nuestro mayor aval</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" style="background: #F2EFE8; color: #161614">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+        <div style="display: flex; flex-direction: column; gap: 12px; max-width: 640px">
+          <span style="font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #6B5E00">Servicios</span>
+          <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(40px, 5vw, 64px); line-height: 0.95; text-transform: uppercase">Servicios a la moto y al motorista</h2>
+        </div>
+        <p style="margin: 0; max-width: 420px; color: #55524A; font-size: 17px">Buscamos siempre la mejor relación calidad-precio, con amplia experiencia en averías mecánicas.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+        <sc-for list="{{services}}" as="s" hint-placeholder-count="3">
+          <article class="card" style="background: #FFFFFF; border: 1px solid #DDD7CA; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; color: #6B5E00">{{s.num}}</span>
+            <h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 32px; line-height: 1; text-transform: uppercase">{{s.title}}</h3>
+            <p style="margin: 0; color: #55524A; font-size: 16px">{{s.text}}</p>
+            <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 15px">
+              <sc-for list="{{s.points}}" as="p" hint-placeholder-count="3">
+                <li style="display: flex; gap: 10px; align-items: flex-start"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B5E00" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M20 6 9 17l-5-5"></path></svg>{{p}}</li>
+              </sc-for>
+            </ul>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASESORAMIENTO -->
+  <section id="asesoramiento" style="max-width: 1240px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+    <img src="./assets/9a17a0664605032115e491a5d4d01201.jpg" alt="Moto custom de segunda mano lista para revisar" style="flex: 1 1 420px; min-width: 0; height: 460px; object-fit: cover; border-radius: 24px; display: block">
+    <div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+      <span style="font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #FEED03">Asesoramiento técnico</span>
+      <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(40px, 5vw, 64px); line-height: 0.95; text-transform: uppercase">¿Vas a comprar una moto de segunda mano?</h2>
+      <p style="margin: 0; color: #C9C4B8; font-size: 18px">No todo el mundo puede permitirse una moto nueva. Antes de pagar, te ayudamos a saber qué estás comprando.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+        <div style="border: 1px solid #2E2E29; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 24px; text-transform: uppercase">Te explicamos</span>
+          <span style="color: #A8A398; font-size: 15px">Qué revisar en la moto que te interesa antes de cerrar el trato.</span>
+        </div>
+        <div style="border: 1px solid #FEED03; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 24px; text-transform: uppercase">Te acompañamos</span>
+          <span style="color: #A8A398; font-size: 15px">Vamos contigo a verla en persona y la revisamos sobre el terreno.</span>
+        </div>
+      </div>
+      <a class="btn" href="https://wa.me/34644371237" style="align-self: flex-start; color: #F2EFE8; text-decoration: none; font-weight: 600; font-size: 16px; padding: 14px 24px; border-radius: 999px; border: 1px solid #4A4A42">Cuéntanos qué moto estás mirando →</a>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section style="border-top: 1px solid #2A2A26; border-bottom: 1px solid #2A2A26">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 72px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 32px">
+      <sc-for list="{{steps}}" as="st" hint-placeholder-count="4">
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 56px; line-height: 1; color: #FEED03">{{st.n}}</span>
+          <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 24px; text-transform: uppercase">{{st.t}}</span>
+          <span style="color: #A8A398; font-size: 15px">{{st.d}}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria" style="max-width: 1240px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #FEED03">Galería</span>
+        <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(40px, 5vw, 64px); line-height: 0.95; text-transform: uppercase">Trabajos y motos amigas</h2>
+      </div>
+      <div role="group" aria-label="Filtrar galería" style="display: flex; flex-wrap: wrap; gap: 8px">
+        <sc-for list="{{filters}}" as="f" hint-placeholder-count="3">
+          <button type="button" onClick="{{f.pick}}" aria-pressed="{{f.pressed}}" style="{{f.style}}">{{f.label}}</button>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px">
+      <sc-for list="{{photos}}" as="ph" hint-placeholder-count="6">
+        <figure style="margin: 0; position: relative; height: 260px; border-radius: 16px; overflow: hidden; background: #1E1E1B">
+          <img src="{{ph.src}}" alt="{{ph.label}}" style="width: 100%; height: 100%; object-fit: cover; display: block">
+          <figcaption style="position: absolute; left: 12px; bottom: 12px; background: rgba(15,15,14,0.82); color: #F2EFE8; font-size: 13px; padding: 6px 10px; border-radius: 999px">{{ph.label}}</figcaption>
+        </figure>
+      </sc-for>
+    </div>
+    <a href="https://www.facebook.com/juankygarage" style="align-self: flex-start; font-weight: 600; font-size: 16px">Más fotos en nuestro Facebook →</a>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background: #F2EFE8; color: #161614">
+    <div style="max-width: 920px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 32px">
+      <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(40px, 5vw, 64px); line-height: 0.95; text-transform: uppercase">Preguntas frecuentes</h2>
+      <div style="display: flex; flex-direction: column; border-top: 1px solid #CFC8B8">
+        <sc-for list="{{faqs}}" as="q" hint-placeholder-count="4">
+          <div style="border-bottom: 1px solid #CFC8B8">
+            <button type="button" onClick="{{q.toggle}}" aria-expanded="{{q.expanded}}" style="width: 100%; background: none; border: 0; padding: 22px 0; display: flex; justify-content: space-between; align-items: center; gap: 16px; text-align: left; cursor: pointer; font-family: Inter, sans-serif; font-size: 19px; font-weight: 600; color: #161614">
+              <span>{{q.q}}</span>
+              <span aria-hidden="true" style="{{q.iconStyle}}">+</span>
+            </button>
+            <sc-if value="{{q.open}}" hint-placeholder-val="{{ false }}">
+              <p style="margin: 0; padding: 0 0 24px; color: #55524A; font-size: 17px; max-width: 720px">{{q.a}}</p>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONDE + CONTACTO -->
+  <section id="donde" style="max-width: 1240px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 48px">
+    <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+      <span style="font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #FEED03">Dónde estamos</span>
+      <h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(40px, 5vw, 64px); line-height: 0.95; text-transform: uppercase">Medina del Campo y alrededores</h2>
+      <p style="margin: 0; color: #C9C4B8; font-size: 17px">Damos servicio a Medina del Campo y sus pueblos, llegando hasta Arévalo. ¿Estás más lejos? Escríbenos igualmente.</p>
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px">
+        <img src="./assets/1f922e82467b313738bc8227e8e5fea7.jpg" alt="Fachada del taller Juanky Garage con el logo sobre la puerta" style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; display: block">
+        <figcaption style="font-size: 13px; color: #A8A398">La puerta del taller · Avenida Constitución, 107</figcaption>
+      </figure>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
+        <div style="display: flex; flex-direction: column; gap: 4px"><span style="color: #A8A398; font-size: 13px; text-transform: uppercase; letter-spacing: 1px">Dirección</span><span style="font-weight: 600">Avenida Constitución, 107</span></div>
+        <div style="display: flex; flex-direction: column; gap: 4px"><span style="color: #A8A398; font-size: 13px; text-transform: uppercase; letter-spacing: 1px">Horario</span><span style="font-weight: 600">Lunes a viernes, 9:00 – 14:00</span></div>
+        <div style="display: flex; flex-direction: column; gap: 4px"><span style="color: #A8A398; font-size: 13px; text-transform: uppercase; letter-spacing: 1px">Teléfono y WhatsApp</span><a href="tel:+34644371237" style="font-weight: 600">644 37 12 37</a></div>
+      </div>
+    </div>
+    <form id="contacto" style="flex: 1 1 440px; min-width: 0; background: #1A1A18; border: 1px solid #2E2E29; border-radius: 24px; padding: 36px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px">
+      <h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 36px; text-transform: uppercase">Escríbenos</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px">
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #C9C4B8">Nombre<input type="text" name="nombre" style="background: #0F0F0E; border: 1px solid #3A3A34; border-radius: 10px; padding: 13px 14px; color: #F2EFE8; font-size: 16px; font-family: Inter, sans-serif"></label>
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #C9C4B8">Teléfono<input type="tel" name="telefono" style="background: #0F0F0E; border: 1px solid #3A3A34; border-radius: 10px; padding: 13px 14px; color: #F2EFE8; font-size: 16px; font-family: Inter, sans-serif"></label>
+      </div>
+      <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #C9C4B8">Correo electrónico<input type="email" name="email" style="background: #0F0F0E; border: 1px solid #3A3A34; border-radius: 10px; padding: 13px 14px; color: #F2EFE8; font-size: 16px; font-family: Inter, sans-serif"></label>
+      <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #C9C4B8">Moto y qué le pasa<textarea name="mensaje" rows="4" style="background: #0F0F0E; border: 1px solid #3A3A34; border-radius: 10px; padding: 13px 14px; color: #F2EFE8; font-size: 16px; font-family: Inter, sans-serif; resize: vertical"></textarea></label>
+      <button class="btn" type="button" style="background: #FEED03; color: #0F0F0E; border: 0; border-radius: 999px; padding: 16px 24px; font-weight: 600; font-size: 17px; font-family: Inter, sans-serif; cursor: pointer">Enviar mensaje</button>
+      <span style="font-size: 14px; color: #A8A398">¿Prefieres hablar? Llámanos o escribe al <a href="https://wa.me/34644371237">WhatsApp 644 37 12 37</a>.</span>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="border-top: 1px solid #2A2A26">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 32px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: 14px; color: #A8A398">
+      <span style="display: flex; align-items: center; gap: 14px"><img src="./assets/1d8d7e1fb2e34f6a98b6f7774f777093.png" alt="Juanky Garage" style="height: 44px; width: auto; display: block">Reparación de motocicletas · Medina del Campo</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px">
+        <a href="https://www.facebook.com/juankygarage">Facebook</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#">Aviso legal</a>
+        <a href="#">Privacidad</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"statusColor":{"editor":"color","default":"#3DDC84","options":["#3DDC84","#FEED03","#A8A398"]},"$preview":{"width":1440,"height":5200}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { openFaq: 0, filter: 'todo' };
+  }
+  renderVals() {
+    const filters = [
+      { id: 'todo', label: 'Todo' },
+      { id: 'taller', label: 'En el taller' },
+      { id: 'amigas', label: 'Motos amigas' }
+    ];
+    const allPhotos = [
+      { cat: 'taller', label: 'Culata y árbol de levas', src: './assets/fa8aa2c0dee74b4e52517788f6101132.jpg' },
+      { cat: 'amigas', label: 'Moto amiga', src: './assets/a048a4235bc49557137bc809e86d05e3.jpg' },
+      { cat: 'taller', label: 'Ajuste de válvulas', src: './assets/8b45c5617fb76b5056eef36cca278073.jpg' },
+      { cat: 'taller', label: 'Revisión de horquilla', src: './assets/11e34598420e72db4a413aea0a2671f7.jpg' },
+      { cat: 'amigas', label: 'Moto amiga', src: './assets/5cf3b7a085d22a38a113bee849e4c379.jpg' },
+      { cat: 'taller', label: 'Carburadores', src: './assets/9bef04c3af3b22f52774078c8cf30af5.jpg' },
+      { cat: 'amigas', label: 'Moto amiga', src: './assets/9cf21b5e09e9622f69e9d151962a13b7.jpg' },
+      { cat: 'taller', label: 'Caja de cambios', src: './assets/816c15208534dc9b00d2f7b1b915d977.jpg' },
+      { cat: 'amigas', label: 'Moto amiga', src: './assets/720a8888a268fc1faf291cf1aca6e616.jpg' }
+    ];
+    const faqData = [
+      { q: '¿Puedo pedir cita por WhatsApp?', a: 'Sí. Escríbenos o llámanos al 644 37 12 37, de lunes a viernes de 9:00 a 14:00.' },
+      { q: '¿Me acompañáis a ver una moto de segunda mano?', a: 'Sí. Te explicamos qué revisar y, si quieres, vamos contigo a verla en persona antes de que la compres.' },
+      { q: '¿Qué zona cubrís?', a: 'Medina del Campo y sus pueblos, llegando hasta Arévalo. Si estás más lejos, contáctanos igualmente.' },
+      { q: '¿Qué tipo de reparaciones hacéis?', a: 'Cualquier tipo de mantenimiento mecánico y eléctrico de tu moto, además de averías mecánicas.' }
+    ];
+    return {
+      statusColor: this.props.statusColor ?? '#3DDC84',
+      services: [
+        { num: '01', title: 'Mantenimiento mecánico', text: 'Cualquier tipo de mantenimiento a tu moto, con la máxima atención y cuidado.', points: ['Revisiones y puesta a punto', 'Aceite, filtros, frenos y transmisión', 'Preparación de motores'] },
+        { num: '02', title: 'Electricidad', text: 'Diagnóstico y reparación de la parte eléctrica de tu moto.', points: ['Batería y carga', 'Encendido y luces', 'Cableado y conexiones'] },
+        { num: '03', title: 'Averías mecánicas', text: 'Amplia experiencia localizando y resolviendo averías, buscando la mejor relación calidad-precio.', points: ['Diagnóstico de la avería', 'Presupuesto antes de reparar', '[TU PRECIO] desde'] }
+      ],
+      steps: [
+        { n: '01', t: 'Contacta', d: 'Llámanos o escribe por WhatsApp y cuéntanos qué le pasa a tu moto.' },
+        { n: '02', t: 'Revisamos', d: 'Traes la moto al taller y la diagnosticamos con calma.' },
+        { n: '03', t: 'Presupuesto', d: 'Te explicamos qué hay que hacer y cuánto cuesta antes de empezar.' },
+        { n: '04', t: 'A rodar', d: 'Reparamos con cuidado y te devolvemos la moto lista.' }
+      ],
+      filters: filters.map((f) => {
+        const on = this.state.filter === f.id;
+        return {
+          label: f.label,
+          pressed: on ? 'true' : 'false',
+          pick: () => this.setState({ filter: f.id }),
+          style: 'min-height: 44px; padding: 10px 18px; border-radius: 999px; font-family: Inter, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; ' + (on ? 'background: #F2EFE8; color: #0F0F0E; border: 1px solid #F2EFE8' : 'background: transparent; color: #F2EFE8; border: 1px solid #4A4A42')
+        };
+      }),
+      photos: allPhotos.filter((p) => this.state.filter === 'todo' || p.cat === this.state.filter),
+      faqs: faqData.map((f, i) => {
+        const open = this.state.openFaq === i;
+        return {
+          q: f.q, a: f.a, open: open,
+          expanded: open ? 'true' : 'false',
+          iconStyle: 'flex: none; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 400; transition: transform .2s ease; ' + (open ? 'background: #161614; color: #F2EFE8; transform: rotate(45deg)' : 'border: 1px solid #CFC8B8; color: #161614'),
+          toggle: () => this.setState({ openFaq: open ? -1 : i })
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>
